@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## DailyNode Web
 
-## Getting Started
+Landing site for **DailyNode** — a modular, self-hosted Discord bot that helps developers build consistent interview-prep habits by posting daily LeetCode challenges, supporting reminders, and providing lightweight practice commands.
 
-First, run the development server:
+- **Invite link**: [Add DailyNode to Discord](https://discord.com/oauth2/authorize?client_id=1476855166958440458&permissions=8&integration_type=0&scope=bot)
+
+### What DailyNode does
+
+- **Daily LeetCode challenge**: posts a problem (from a curated dataset of ~150) to a configured channel
+- **Difficulty support**: Easy / Medium / Hard
+- **Reminders**: users can opt in/out via `/remindme` and `/reminderoff`
+- **Server configuration**: `/setleetcodechannel`, `/settime`, `/setdifficulty`
+- **Practice commands**: `/todayleetcode`, `/practice`, `/myquestion`, `/mydifficulty`, `/mysettings`
+- **Help**: `/help` for in-bot guidance
+
+### Run the website locally
+
+Install dependencies and start dev:
 
 ```bash
+cd dailynodeweb
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### HTTPS (local dev)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Next.js can generate a self-signed cert for local HTTPS:
 
-## Learn More
+```bash
+cd dailynodeweb
+npx next dev --experimental-https -p 3000
+```
+
+Open `https://localhost:3000` (your browser may show a self‑signed warning).
+
+### Docker (consistent runs)
+
+Build and run (production build):
+
+```bash
+cd dailynodeweb
+docker compose up --build
+```
+
+Then open `http://localhost:3000`.
+
+### Optional: numbers shown on the landing page
+
+You can control the landing-page counters via environment variables.
+Create `dailynodeweb/.env.local`:
+
+```ini
+NEXT_PUBLIC_DAILYNODE_SERVERS=25
+NEXT_PUBLIC_DAILYNODE_DAILY_PROBLEMS=150
+```
+
+Restart `npm run dev` after changes.
+
+### Project notes
+
+- **Framework**: Next.js (App Router) + TypeScript + Tailwind
+- **UI structure**: components live under `src/components/*` (sections + layout)
+- **Docs page**: visit `http://localhost:3000/docs`
+
+### Learn more
 
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
