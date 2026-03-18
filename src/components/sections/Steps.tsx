@@ -1,18 +1,18 @@
 const STEPS = [
   {
     step: "1",
-    title: "Add DailyNode to your server",
-    body: "Click the invite button, pick your dev or infra server, and grant the minimal permissions DailyNode needs to post updates.",
+    title: "Add DailyNode to your Discord server",
+    body: "Invite the bot, choose which channel should receive daily LeetCode challenges, and make sure it can post there.",
   },
   {
     step: "2",
-    title: "Connect your Node projects",
-    body: "Wire up GitHub, deployment pipelines, or health checks. Use our tiny Node client or just hit a webhook from your existing tooling.",
+    title: "Configure schedule and difficulty",
+    body: "Use /settime and /setdifficulty so your server gets problems at the right time and level (Easy, Medium, or Hard).",
   },
   {
     step: "3",
-    title: "Let the bot run your rhythm",
-    body: "Schedule standups, summaries, and alerts in the channels your team already lives in. No dashboards to babysit.",
+    title: "Let people opt into reminders",
+    body: "Encourage members to run /remindme so DailyNode pings them to solve today’s problem and keeps habits on track.",
   },
 ];
 

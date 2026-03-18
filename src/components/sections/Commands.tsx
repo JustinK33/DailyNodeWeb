@@ -1,38 +1,38 @@
 const CORE_COMMANDS = [
   {
-    name: "/daily setup",
-    description: "Connect a project and choose where DailyNode posts updates.",
+    name: "/todayleetcode",
+    description: "Get today’s LeetCode problem immediately, including difficulty and link.",
   },
   {
-    name: "/daily today",
-    description: "Get a one-off summary of incidents, deploys, and PRs.",
+    name: "/practice",
+    description: "Start a focused practice session and pull a fresh problem to solve.",
   },
   {
-    name: "/daily standup",
-    description: "Run an async standup in any channel in under 60 seconds.",
+    name: "/myquestion",
+    description: "See the problem you are currently working on so you never lose context.",
   },
   {
-    name: "/daily health",
-    description: "Check uptime, latency, and error rate for your Node services.",
+    name: "/help",
+    description: "Open the in-bot guide with all commands and setup instructions.",
   },
 ];
 
 const GROWTH_COMMANDS = [
   {
-    name: "/daily streaks",
-    description: "Celebrate shipping streaks and keep your team moving.",
+    name: "/remindme",
+    description: "Enable personal reminders so you never skip a daily problem.",
   },
   {
-    name: "/daily alerts",
-    description: "Configure lightweight alerts directly from Discord.",
+    name: "/reminderoff",
+    description: "Turn off reminders when you need a break from the grind.",
   },
   {
-    name: "/daily config",
-    description: "Tweak schedules, channels, and integrations on the fly.",
+    name: "/mydifficulty / /mysettings",
+    description: "Check your current difficulty and configuration at any time.",
   },
   {
-    name: "/daily help",
-    description: "See all commands and examples in one place.",
+    name: "/setleetcodechannel / /settime / /setdifficulty",
+    description: "Admin tools to choose the channel, schedule, and difficulty mix for your server.",
   },
 ];
 
@@ -75,16 +75,16 @@ export function Commands() {
           </p>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <h2 className="text-2xl font-semibold tracking-tight text-zinc-50 sm:text-3xl">
-              Simple slash commands for
-              <span className="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
+              Everything you need to run
+              <span className="bg-gradient-to-r from-amber-300 to-emerald-400 bg-clip-text text-transparent">
                 {" "}
-                real-time context
+                daily coding drills
               </span>
               .
             </h2>
             <p className="max-w-sm text-sm text-zinc-400">
-              Everything DailyNode does starts from a few focused commands.
-              Teach your server once and let the bot handle the routine work.
+              DailyNode keeps the surface area small: a handful of commands to
+              configure your server, pull problems, and stay accountable.
             </p>
           </div>
         </div>
