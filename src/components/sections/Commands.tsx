@@ -12,6 +12,10 @@ const CORE_COMMANDS = [
     description: "See the problem you are currently working on so you never lose context.",
   },
   {
+    name: "/myquestionset",
+    description: "Choose your problem set: Blind 75, LeetCode 150, or LeetCode 250.",
+  },
+  {
     name: "/help",
     description: "Open the in-bot guide with all commands and setup instructions.",
   },

@@ -48,6 +48,22 @@ export function Hero({ activeServers, dailyProblems, onInviteClick }: HeroProps)
               View commands
             </Link>
           </div>
+          <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-zinc-500">
+              Question Sets via /myquestionset
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2 text-xs">
+              <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2.5 py-1 text-zinc-200">
+                Blind 75
+              </span>
+              <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2.5 py-1 text-zinc-200">
+                LeetCode 150
+              </span>
+              <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-1 font-medium text-emerald-300">
+                LeetCode 250
+              </span>
+            </div>
+          </div>
           <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-4 text-sm text-zinc-400">
             <div>
               <dt className="font-medium text-zinc-300">Active servers</dt>

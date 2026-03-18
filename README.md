@@ -6,11 +6,11 @@ Landing site for **DailyNode** — a modular, self-hosted Discord bot that helps
 
 ### What DailyNode does
 
-- **Daily LeetCode challenge**: posts a problem (from a curated dataset of ~150) to a configured channel
+- **Daily LeetCode challenge**: posts a problem (from a curated dataset of ~250) to a configured channel
 - **Difficulty support**: Easy / Medium / Hard
 - **Reminders**: users can opt in/out via `/remindme` and `/reminderoff`
 - **Server configuration**: `/setleetcodechannel`, `/settime`, `/setdifficulty`
-- **Practice commands**: `/todayleetcode`, `/practice`, `/myquestion`, `/mydifficulty`, `/mysettings`
+- **Practice commands**: `/todayleetcode`, `/practice`, `/myquestion`, `/myquestionset`, `/mydifficulty`, `/mysettings`
 - **Help**: `/help` for in-bot guidance
 
 ### Run the website locally
@@ -54,7 +54,7 @@ Create `dailynodeweb/.env.local`:
 
 ```ini
 NEXT_PUBLIC_DAILYNODE_SERVERS=25
-NEXT_PUBLIC_DAILYNODE_DAILY_PROBLEMS=150
+NEXT_PUBLIC_DAILYNODE_DAILY_PROBLEMS=250
 ```
 
 Restart `npm run dev` after changes.

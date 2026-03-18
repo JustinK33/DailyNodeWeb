@@ -15,19 +15,21 @@ export default function Home() {
   const baseServers =
     Number(process.env.NEXT_PUBLIC_DAILYNODE_SERVERS ?? "25") || 25;
   const baseDailyProblems =
-    Number(process.env.NEXT_PUBLIC_DAILYNODE_DAILY_PROBLEMS ?? "150") || 150;
+    Number(process.env.NEXT_PUBLIC_DAILYNODE_DAILY_PROBLEMS ?? "250") || 250;
 
-  const [activeServers, setActiveServers] = useState(baseServers);
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem("dailynode-active-servers");
-    if (stored) {
-      const parsed = Number(stored);
-      if (!Number.isNaN(parsed) && parsed > 0) {
-        setActiveServers(parsed);
-      }
+  const [activeServers, setActiveServers] = useState(() => {
+    if (typeof window === "undefined") {
+      return baseServers;
     }
-  }, []);
+
+    const stored = window.localStorage.getItem("dailynode-active-servers");
+    if (!stored) {
+      return baseServers;
+    }
+
+    const parsed = Number(stored);
+    return !Number.isNaN(parsed) && parsed > 0 ? parsed : baseServers;
+  });
 
   useEffect(() => {
     window.localStorage.setItem(

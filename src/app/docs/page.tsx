@@ -81,6 +81,10 @@ export default function DocsPage() {
             see the problem you&apos;re currently working on.
           </li>
           <li>
+            <span className="font-mono text-emerald-300">/myquestionset</span> –
+            choose your question set: Blind 75, LeetCode 150, or LeetCode 250.
+          </li>
+          <li>
             <span className="font-mono text-emerald-300">/remindme</span> /
             <span className="font-mono text-emerald-300"> /reminderoff</span> –
             turn personal reminders on or off.

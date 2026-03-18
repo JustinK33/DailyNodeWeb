@@ -1,7 +1,7 @@
 const FEATURES = [
   {
     title: "Daily LeetCode challenge drops",
-    body: "Posts a fresh problem every day from a curated set of 150 LeetCode questions, with title, difficulty, and direct link.",
+    body: "Posts a fresh problem every day from a curated set of 250 LeetCode questions, with title, difficulty, and direct link.",
   },
   {
     title: "Personal reminder system",
@@ -13,7 +13,7 @@ const FEATURES = [
   },
   {
     title: "Practice sessions on demand",
-    body: "Use /todayleetcode, /practice, and /myquestion to pull a problem instantly and keep track of what you are working on.",
+    body: "Use /todayleetcode, /practice, /myquestion, and /myquestionset to pull a problem instantly, switch between Blind 75 / LeetCode 150 / LeetCode 250, and keep track of what you are working on.",
   },
 ];
 
