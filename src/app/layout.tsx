@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DailyNode • Discord bot for Node teams",
+  title: "DailyNode • Discord bot for leetcode accountability",
   description:
-    "DailyNode keeps your Discord dev server in sync with daily summaries, standups, and health checks for all your Node.js services.",
+    "DailyNode is a Discord bot that posts daily LeetCode challenges, nudges you with reminders, and tracks your interview prep habits so you stay consistent.",
   icons: {
     icon: "icon.png",
   },
